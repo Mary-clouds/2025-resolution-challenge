@@ -1,12 +1,25 @@
 
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
 .container{
-           
-    border-radius: 10px;
+    margin: 0 auto;     
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+    
 }
 .header{
 
     background-position: center;
-    
+    background-color:  #f4f4f4;
+
     text-align: center;
     padding: 100px 0;
 }
@@ -14,13 +27,38 @@
     font-size: 3em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
+    background-color:  #f4f4f4;
+
     
+}
+.message-wrapper{
+    position: relative;
+    font-size: 130px;
+}
+span[role="bouncing-number"]{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 8px;
+    animation: waveAnimation 1s infinite;
+    animation-delay: calc(.1s * var(--index));
+}
+@keyframes waveAnimation{
+    0%,40%,100%{
+        transform:translateY(0) ;
+    }
+    20%{
+        transform: translateY(-70px);
+    }
 }
 .subheading-title{
     font-size: 2em;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    padding: 10px;
+  
+
 }
 .subheading-text{
     font-size: 1em;
@@ -30,21 +68,23 @@
 
 #carouselExampleAutoplaying{
     text-align: center;
-    background-color:chartreuse;
-    padding: 20px;
-    margin-bottom: 30px;
-    
+    background: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+    padding: 25px;
+    margin: 30px;
+    border-radius: 20px;
+  
     
 }
+
 .main-section{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 25px;
     margin-top: 50px;
-    background-color: #f4f4f4;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color:  #f4f4f4;
 }
 
 .goal-link{
@@ -57,30 +97,36 @@
 .goal-description{
     max-width: 60%;
 }
+
 .title{
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 10px;
 
 }
+
 .description{
     font-size: 1em;
     color: #666;
     line-height: 1.6;
 }
+
 .womangoal{
     max-width: 35%;
     height: auto;
     border-radius: 8px;
 }
+
 form{
     text-align: center;
 }
+
 #subheading{
     text-align: center;
     padding: 20px;
     border-radius: 10px;
 }
+
 
 @keyframes progress{
     0% {--percentage: 0;}
@@ -95,17 +141,26 @@ form{
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color:  #f4f4f4;
+    padding: 15px;
+    margin: 10px;
 }
 .progressbar-item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+.progressbar-item:hover{
+    transform: translateY(-10px);
 }
 
 div[role="progressbar"]{
     --percentage: var(--value);
-    --primary: blue;
-    --secondary: skyblue;
+    --primary: #3b82f6;
+    --secondary: #93c5fd;
     --size: 100px;
    
     width: var(--size);
@@ -113,10 +168,13 @@ div[role="progressbar"]{
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
    
 }
 div[role="progressbar"]:hover{
     animation: progress 2s 0.5s forwards;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     
 }
 div[role="progressbar"]::before{
@@ -143,12 +201,19 @@ div[role="progressbar"]::after{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 #progress-title{
 margin-top: 10px;
 font-size: 14px;
 color: #333;
 text-align: center;
+text-transform: capitalize;
+transition: color 0.3s ease;
 }
 #progress-title:hover{
     color: chartreuse;
+}
+footer{
+    text-align: center;
+    margin-top: 20px;
 }
