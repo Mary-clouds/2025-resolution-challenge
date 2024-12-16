@@ -217,3 +217,36 @@ footer{
     text-align: center;
     margin-top: 20px;
 }
+.dark-theme-button{
+    display: block;
+    margin-bottom: 10px; 
+    padding-bottom: 5px ;
+    background: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%); ;
+    color: black;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.dark-theme-button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+button{
+  
+    transition: all 150ms ease-in-out;
+}
+.dark-theme{
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+
+  }
+  .dark-theme a{
+    color:#ee82ee;
+  }
+  .dark-theme .container{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+    color:black;
+  }
+  .dark-theme footer{
+    color: white;
+  }

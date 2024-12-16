@@ -12,11 +12,11 @@
 </head>
 <body>
     <div class="container">
+      <button class="dark-theme-button"> change theme</button>
     <header class="header">
         <h1 class="header-message">
           🎆Happy New Year🎆
           <div class="message-wrapper">
-
           <span role="bouncing-number" style="--index:1">2</span>
           <span role="bouncing-number" style="--index:2">0</span>
           <span role="bouncing-number" style="--index:3">2</span>
@@ -115,7 +115,13 @@
 
 </div>
     <footer>Coded with ❤️ by Nevermann @2024, open sourced in <a href="">Github</a></footer>
-    <script> function shareYourGoal(event){
+    <script>
+      function changeTheme(){
+        let bodytheme = document.querySelector("body");
+         bodytheme.classList.toggle("dark-theme");
+
+      }
+      function shareYourGoal(event){
       event.preventDefault();
         let promptMessage = event.target.value;
         if(promptMessage){
@@ -129,6 +135,9 @@
     if(goalSharingElement){
     goalSharingElement.addEventListener("change", shareYourGoal);
     }
+
+    let buttontheme = document.querySelector(".dark-theme-button");
+    buttontheme.addEventListener("click", changeTheme);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
